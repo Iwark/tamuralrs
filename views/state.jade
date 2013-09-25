@@ -1,0 +1,14 @@
+p 発言してください
+form(method='post', action='/state')
+  fieldset
+    legend Statementを送信
+    p
+      label(for='state[actor]') Actor:
+      input(name='state[actor]')
+    p
+      label(for='state[verb]') Verb:
+      input(name='state[verb]')
+    p
+      label(for='state[object]') Object:
+      input(name='state[object]')
+    input(type='submit')

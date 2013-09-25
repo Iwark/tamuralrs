@@ -3,3 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  table#statements
+    tr
+      th(width=150) Actor
+      th(width=150) Verb
+      th(width=150) Object
+        each statement, id in statements
+          tr(id=id)
+            each val in statement
+              td #{val}
+  include state.jade
