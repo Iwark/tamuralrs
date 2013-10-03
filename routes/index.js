@@ -18,7 +18,7 @@ exports.index = function(req, res){
 };
 
 exports.state = function(req, res){
-	statements.add(req.body, function(err){
+	statements.add(req.files, function(err){
 		if(err){ console.log(err); }
 		res.redirect(req.header('Referrer') || '/');
 	});
