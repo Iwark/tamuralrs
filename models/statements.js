@@ -1,5 +1,6 @@
 var mongo = require('mongoskin');
-var db = mongo.db('localhost:27017/tamuralrs');
+var uri = process.env.MONGOHQ_URL || 'localhost:27017/tamuralrs';
+var db = mongo.db(uri);
 var statements = db.collection('statements');
 
 exports.pull = function pull(page, cb){
