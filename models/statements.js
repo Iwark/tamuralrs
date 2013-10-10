@@ -5,7 +5,7 @@ var statements = db.collection('statements');
 
 exports.pull = function pull(page, cb){
 	var p = {};
-	var rowsPer = 10;
+	var rowsPer = 100;
 	var skip;
 	var errs;
 
