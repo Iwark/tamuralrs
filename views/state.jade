@@ -1,14 +1,37 @@
-p 発言してください
+p Please send a statement.
 form(method='post', action='/state')
   fieldset
-    legend Statementを送信
+    legend Statement
     p
-      label(for='state[actor]') Actor:
-      input(name='state[actor]')
+      div(class='state_label') Actor:
+      div(class='state_text')
+        input(name='state[actor]')
     p
-      label(for='state[verb]') Verb:
-      input(name='state[verb]')
+      div(class='state_label') Verb:
+      div(class='state_text')
+        input(name='state[verb]')
     p
-      label(for='state[object]') Object:
-      input(name='state[object]')
+      div(class='state_label') Object:
+      div(class='state_text')
+        input(name='state[object]')
+    p
+      div(class='state_label') Result:
+      div(class='state_text')
+        div(class='state_radio')
+          input(name='state[result][success]' type='radio' value="true" checked)
+          span succeeded
+        div(class='state_radio')
+          input(name='state[result][success]' type='radio' value="false")
+          span failed
+      div(class='state_text')
+        div(class='state_radio')
+          input(name='state[result][completion]' type='radio' value="true" checked)
+          span completed
+        div(class='state_radio')
+          input(name='state[result][completion]' type='radio' value="false")
+          span incompleted
+      p Extensions(from):
+      input(name='state[result][extensions][from]')
+      p Extensions(to):
+      input(name='state[result][extensions][to]')
     input(type='submit')

@@ -6,3 +6,22 @@ body {
 a {
   color: #00B7FF;
 }
+
+p {
+	clear: both;
+}
+
+.state_label {
+	margin-bottom: 10px;
+	float: left;
+	width: 60px;
+}
+.state_text {
+	margin-bottom: 10px;
+	float: left;
+	width: 100px;
+}
+.state_radio {
+	clear: both;
+	width: 120px;
+}

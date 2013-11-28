@@ -8,8 +8,9 @@ block content
       th(width=150) Actor
       th(width=150) Verb
       th(width=150) Object
+      th(width=150) Result
         each statement, id in statements
           tr(id=id)
             each val in statement
-              td #{val}
+              td #{JSON.stringify(val)}
   include state.jade
