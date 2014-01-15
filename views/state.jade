@@ -1,19 +1,50 @@
-p Please send a statement.
+p - Please send a statement. -
 form(method='post', action='/state')
   fieldset
     legend Statement
     p
       div(class='state_label') Actor:
       div(class='state_text')
-        input(name='state[actor]')
+        div(class='state_radio')
+          input(name='state[actor][objectType]' type='radio' value="student" checked)
+          span student
+        div(class='state_radio')
+          input(name='state[actor][objectType]' type='radio' value="teacher")
+          span teacher
+      div(class='state_text') Name:
+        input(name='state[actor][name]' class='state_input')
+      div(class='state_text') Email:
+        input(name='state[actor][email]' class='state_input')
+      //
+        div(class='state_text') Password:
+          input(name='state[actor][password_digest]' type='password' class='state_input')
     p
       div(class='state_label') Verb:
-      div(class='state_text')
-        input(name='state[verb]')
+      div(class='state_text') Display:
+        input(name='state[verb][display]' class='state_input')
     p
       div(class='state_label') Object:
       div(class='state_text')
-        input(name='state[object]')
+        div(class='state_radio')
+          input(name='state[object][objectType]' type='radio' value="activity" checked)
+          span Activity
+        div(class='state_radio')
+          input(name='state[object][objectType]' type='radio' value="actor")
+          span Actor
+        div(class='state_radio')
+          input(name='state[object][objectType]' type='radio' value="statement_ref")
+          span StatementRef
+      div(class='state_text') DefinitionName:
+        input(name='state[object][definition][name]' class='state_input')
+      div(class='state_text') DefinitionDescription:
+        input(name='state[object][definition][description]' class='state_input')
+      div(class='state_text') DefinitionType:
+        input(name='state[object][definition][type]' class='state_input')
+      div(class='state_text') ExtensionsType:
+        input(name='state[object][extensions][type]' class='state_input')
+      div(class='state_text') ExtensionsDescription:
+        input(name='state[object][extensions][description]' class='state_input')
+
     p
       div(class='state_label') Result:
       div(class='state_text')
@@ -30,8 +61,8 @@ form(method='post', action='/state')
         div(class='state_radio')
           input(name='state[result][completion]' type='radio' value="false")
           span incompleted
-      p Extensions(from):
-      input(name='state[result][extensions][from]')
-      p Extensions(to):
-      input(name='state[result][extensions][to]')
+      div(class='state_text') ExtensionsType:
+        input(name='state[result][extensions][type]' class='state_input')
+      div(class='state_text') ExtensionsDescription:
+        input(name='state[result][extensions][description]' class='state_input')
     input(type='submit')

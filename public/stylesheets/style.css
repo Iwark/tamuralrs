@@ -10,6 +10,19 @@ a {
 p {
 	clear: both;
 }
+th {
+	background-color: #dddddd;
+}
+.odd {
+	background-color: #eecccc;
+}
+.even {
+	background-color: #cceecc;
+}
+td {
+	vertical-align: top;
+	padding: 5px;
+}
 
 .state_label {
 	margin-bottom: 10px;
@@ -19,7 +32,10 @@ p {
 .state_text {
 	margin-bottom: 10px;
 	float: left;
-	width: 100px;
+	width: 180px;
+}
+.state_input {
+	width: 150px;
 }
 .state_radio {
 	clear: both;

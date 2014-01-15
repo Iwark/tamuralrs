@@ -5,7 +5,14 @@
 ePubsフォルダにあるePubをReadiumなどで読み込んで使ってください。
 ****
 
+Alan completed “purchase food from the store” with result of 30 pounds.
+Alan attempted “Kansas River crossing” section.
+Alan experienced “party member getting dysentery.” Alan experienced “ignore dysentery and continue on journey.”
 
+ePubリーダーとLRSの間のTinCan　ユースケース
+ページめくり
+ページ滞在時間
+google analysticsを参考にしてみる
 
 ##LRSのユースケース
 
@@ -13,7 +20,7 @@ ePubsフォルダにあるePubをReadiumなどで読み込んで使ってくだ�
 
 1. ノート
 ```
-Actor1が、textbookに、ノートを追加した。
+*Actor*が、textbookに、ノートを追加した。
 ```
 2. ノートに描画を含める
 3. ノートのテキスト検索
@@ -32,3 +39,4 @@ Actor1が、textbookに、ノートを追加した。
 16.
 17.
 18.
+

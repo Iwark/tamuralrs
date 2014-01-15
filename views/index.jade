@@ -5,12 +5,30 @@ block content
   p Welcome to #{title}
   table#statements
     tr
-      th(width=150) Actor
-      th(width=150) Verb
-      th(width=150) Object
-      th(width=150) Result
+      th(width=160) Actor
+      th(width=160) Verb
+      th(width=420) Object
+      th(width=160) Result
         each statement, id in statements
-          tr(id=id)
-            each val in statement
-              td #{JSON.stringify(val)}
+          tr(class=(i % 2 == 0) ? 'odd' : 'even')
+            each value in statement
+              td
+                for val,key in value
+                  if typeof val == "object"
+                    span
+                      span #{key}:
+                      br
+                      for v,k in val
+                        span(style='padding-left:20px;') #{k}:#{v}
+                        br
+                  else
+                    span #{key}:#{val}
+                    br
+  p
+    each statement, id in statements
+      span #{statement.actor.name} #{statement.verb.display} #{statement.object.definition.description}
+      span  ( #{statement.object.extensions.type}:#{statement.object.extensions.description} )
+      span  with a result of #{statement.result.extensions.type}:#{statement.result.extensions.description}
+      br
+  br
   include state.jade
